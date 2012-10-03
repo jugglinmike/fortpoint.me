@@ -35,7 +35,7 @@ html, body {
 	height: 85px;
 	display: block;
 }
-#header {
+#page-header {
 	position:relative;
 	clear:both;
 	margin-bottom: 28px;
