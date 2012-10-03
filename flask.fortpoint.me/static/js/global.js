@@ -137,31 +137,6 @@
 		$('#companies li.' + $p_id).removeClass('hint');
 	});
 
-	
-	/**************  FOOTER POSITIONING FIX **************/
-	
-	if ($('#footer').length) {
-		var timer
-		// Define positioning
-		function adjustFooter() {
-			if($('body').height() > ($('#wrapper').height() + 70)) {
-				$('#footer').css('position','fixed').css('bottom','0').css('width', $('#wrapper').width());
-			}
-			else {
-				$('#footer').css('position','absolute').css('bottom','-50px').css('width', '100%');
-			}
-		}
-		// Run at page load
-		adjustFooter();
-		// Run at page resize
-		$(window).resize(function() {
-			clearTimeout(timer);
-			timer = setTimeout(function() {
-				adjustFooter();
-			}, 400)
-		});
-	}
-	
 	/**************  STORY PAGE FEATURE LINKS **************/
 	
 	if ($('ul.atlas-story-list').length) {

@@ -831,11 +831,7 @@ a:hover,a:active {
 
 /* Footer */
 #footer {
-	margin: 0 0 30px 0;
 	padding: 15px 0;
-	position: absolute;
-	bottom: -20px;
-	width: 100%;
 	background: #fff;
 	color: #999;
 	font-size:11px;
@@ -868,11 +864,6 @@ a:hover,a:active {
 }
 #footer #site-manager:hover {
 	background: #e6e6e6;
-}
-#footer #social-links {
-	position: absolute;
-	left: 0;
-	bottom: 1px;
 }
 #footer #social-links a {
 	display: inline;
