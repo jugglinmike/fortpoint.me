@@ -53,78 +53,29 @@ html, body {
 	display:inline;
 	margin:0 5px 0 0;
 }
-#sidebar-left {
-	width:250px;
-	float: left;
-	margin-bottom: 30px;
-	text-align: right;
-}
-
-.home #sidebar-left {
-	margin-bottom: 20px;
-}
-#sidebar-left p {
-	font-size: 13px;
-	padding-right: 30px;
-}
-
-#sidebar-left #bio-teaser p {
-	padding-right: 0;
-}
-
-#navigation, #left-sidebar-widgets {
-	padding-right: 30px;
-}
-#left-sidebar-widgets p {
-	padding-right: 0;
-}
-
-.slug-press #left-sidebar-widgets,
-.slug-faqs #left-sidebar-widgets,
-.slug-contact #left-sidebar-widgets {
-	padding-top: 30px;
-}
 
 /*////////////////////////////////*/
 /* Navigation */
 /*////////////////////////////////*/
 
-.home #navigation {
-	height: 96px;
+#page-nav {
+	width:220px;
+	float: left;
+	margin-bottom: 20px;
+	text-align: right;
 	border-right: 1px solid #e2e2e2;
 	padding-right: 29px;
 }
 
-#team-page #navigation {
-	margin-bottom: 38px;
-}
-
-#navigation ul {
+#page-nav ul {
 	margin: 0;
 }
 
-#navigation ul li {
+#page-nav ul li {
 	margin-bottom: 4px;
 }
 
-#navigation ul li ul {
-	margin-top: 8px;
-	display: none;
-}
-
-.page-template-page-story-php #navigation ul li ul.story-subnav,
-.slug-atlas-stories #navigation ul li ul.story-subnav,
-.slug-exits #navigation ul li ul.story-subnav,
-.post-type-atlas-stories #navigation ul li ul.story-subnav,
-.exit-detail #navigation ul li ul.story-subnav {
-	display: block;
-}
-
-#navigation ul li ul li {
-	margin-bottom: 0;
-}
-
-#navigation li a {
+#page-nav li a {
 	font-size: 24px;
 	margin: 0;
 	text-transform: uppercase;
@@ -132,69 +83,6 @@ html, body {
 	font-weight: normal;
 	text-align: right;
 }
-
-#navigation li ul li a,
-.story-subnav li a {
-	font-weight: normal;
-	text-transform: uppercase;
-	font-size: 10px;
-	margin:0;
-}
-
-#navigation li.current_page_item ul,
-#navigation li.current_page_ancestor ul,
-#companies-page #navigation li#companies-item ul,
-.slug-exits #navigation li#companies-item ul,
-#team-page #navigation li#team-item ul {
-	display: block;
-}
-
-#navigation li.current_page_item a,
-#navigation li.current_page_ancestor a,
-#navigation li ul a.current_page_item,
-#navigation li ul a.current_page_ancestor,
-#navigation li ul a.active,
-.page-template-page-story-php #navigation ul li#story-item a.primary,
-.slug-atlas-stories li#story-item a.primary,
-.slug-story li#story-item a.primary,
-.slug-atlas-stories li#story-item a.atlas-stories,
-.post-type-atlas-stories #navigation ul li#story-item a.primary,
-.post-type-atlas-stories li#story-item a.atlas-stories,
-.post-type-exits #navigation ul li#story-item a.primary,
-.post-type-exits li#story-item a.exits,
-.exit-detail #navigation ul li#story-item a.primary,
-.exit-detail li#story-item a.exits {
-	color:#bc492c;
-}
-
-#navigation li.current_page_item ul a,
-#navigation li.current_page_ancestor ul a {
-	color:#335D7F;
-}
-
-#navigation li.current_page_item ul a:hover,
-#navigation li.current_page_ancestor ul a:hover {
-	color:#146bb2;
-}
-
-#team-page #navigation li#team-item a.primary,
-.post-type-team_bio li#team-item a.primary {
-	color:#bc492c;
-}
-
-#companies-page li#companies-item a.primary {
-	color:#bc492c;
-}
-
-#navigation li.last a,
-#navigation #menu-main-menu li {
-	margin-bottom: 0 ;
-}
-
-#navigation ul li ul.story-subnav {
-	margin-bottom: 20px;
-}
-
 
 /*////////////////////////////////*/
 /* Content */
@@ -236,12 +124,6 @@ html, body {
 	line-height: 28px;
 }
 
-#companies-page #content-main,
-#team-page #content-main {
-	padding-top: 6px;
-}
-
-
 #content-sub {
 	float:right;
 	width:300px;
@@ -257,10 +139,6 @@ html, body {
 	border-bottom: 1px solid #eee;
 	padding-bottom: 15px;
 	margin-bottom: 15px;
-}
-
-.slug-atlas-stories #content-sub .year-filter {
-	border-bottom: none;
 }
 
 #content-sub .year-filter a.active,
@@ -364,9 +242,6 @@ html, body {
 .postinfo li.commentdata {
 	background:url(/static/images/icons/balloon_small.png) left center no-repeat;
 }
-.postinfo li.last {
-	padding-right:0;
-}
 /* Post Navigation */
 #post-navigation {
 	width:100%;
@@ -404,14 +279,6 @@ html, body {
 }
 .not-singular .post {
 	border-bottom:1px dotted #ccc;
-}
-
-.exit-detail .post {
-	border-bottom: none;
-}
-
-.exit-detail .post p {
-	margin-bottom: 15px;
 }
 
 .post-title {
@@ -831,7 +698,7 @@ a:hover,a:active {
 
 /* Footer */
 #page-footer {
-	padding: 15px 0;
+	padding: 30px 0;
 	background: #fff;
 	color: #999;
 	font-size:11px;
@@ -922,37 +789,6 @@ a:hover,a:active {
 	display: block;
 	background:#335d7f;
 	padding:15px;
-}
-#team-page #content {
-	min-height: 450px;
-}
-#bio-teaser .viewfull {
-	width: 100%;
-	text-transform: uppercase;
-	font-size: 10px;
-	display: block;
-}
-#bio-teaser {
-	padding-right: 30px;
-	margin-bottom: 18px;
-}
-#bio-teaser .bio-link {
-	float: right;
-	border:1px solid #e6e6e6;
-	margin-left: 8px;
-	margin-bottom: 15px;
-	padding:1px 6px;
-	font-size: 10px;
-	display: inline;
-}
-#bio-teaser .bio-link:hover {
-	background: #e6e6e6;
-}
-#team-page .social-link {
-	float: right;
-	display: inline;
-	margin-left: 5px;
-	margin-top: 8px;
 }
 #bio-block {
 	float: right;
@@ -1216,11 +1052,6 @@ ul#companies {
     background: url(/static/images/icons/exit-arrow.png) center right no-repeat;
     padding-right: 13px;
     padding-top: 2px;
-}
-
-.slug-exits li#companies-item a.primary,
-.slug-exits li#companies-item exits-link {
-    color: #BC492C;
 }
 
 .buttons {padding:5px 0px; width:30px; float:left;}

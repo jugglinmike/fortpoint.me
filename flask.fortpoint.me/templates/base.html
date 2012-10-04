@@ -65,21 +65,22 @@
 
 <div id="content">
 
-    <div id="sidebar-left"><div id="navigation" class="clearfix">
+    <nav id="page-nav">
         <ul id="coded-menu">
-            <li id="team-item" class="first menu-item menu-item-type-post_type menu-item-13"><a {% if active=="team" %}class="primary"{% endif %} href="/team/">Team</a></li>
-            <li id="companies-item" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-37 menu-item-39"><a {% if active=="companies" %}class="primary"{% endif %} href="/companies/">Companies</a>
+            <li id="team-item" class="first menu-item menu-item-type-post_type menu-item-13">
+                <a {% if active=="team" %}class="primary"{% endif %} href="/team/">Team</a>
+            </li>
+            <li id="companies-item" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-37 menu-item-39">
+                <a {% if active=="companies" %}class="primary"{% endif %} href="/companies/">Companies</a>
+            </li>
             <li id="story-item">
                 <a {% if active=="story" %}class="primary"{% endif %} href="/story/">Story</a>
-
             </li>
             <li id="connect-item">
                 <a {% if active=="connect" %}class="primary"{% endif %} href="/connect/">Connect</a>
-
             </li>
         </ul>
-    </div>
-    </div><!-- end #sidebar-left -->
+    </nav>
 
 <div id="content-main" class="clearfix">
     {% block contenttop %}
@@ -90,8 +91,7 @@
 
 {% block content %}
 {% endblock %}
-<div class="clearfix"></div>
-<footer id="page-footer">
+<div id="footer clearfix">
     {% block extrafooter %}
     {% endblock %}
     <p id="social-links">
