@@ -11,10 +11,8 @@ body {
 	background: none;
 	font-size: 12pt;
 }
-#sidebar,
 #page-header,
 #page-footer,
-#commentform,
 .postinfo {
 	display:none;
 }
