@@ -1,7 +1,10 @@
 from flask import Flask, Response, request, render_template
-from flask import redirect, url_for
-from subprocess import call
+from flask import redirect, url_for, request
+from subprocess import Popen
 from os.path import abspath, dirname, join
+import json
+import settings
+import re
 
 HERE = dirname(abspath(__file__))
 
@@ -40,10 +43,27 @@ def connect():
 
 @app.route('/github-webhook', methods=['POST'])
 def pull_latest():
-    github_ips = ['207.97.227.253', '50.57.128.197', '108.171.174.178']
-    if request.remote_addr in github_ips:
-        script = join('..', HERE, 'pull-latest.sh')
-        call(script, shell=True)
+
+    if request.args['secret'] != settings.github_secret:
+      return ""
+
+    payload = json.loads(request.form['payload'])
+
+    match = re.search("^refs/heads/(preview-[a-zA-Z0-9_/-]+|master)$",
+            payload['ref'])
+    if not match:
+      return ""
+
+    branchname = match.group(1)
+
+    script = join(HERE, '..', 'pull-latest.sh')
+
+    try:
+        Popen([script, branchname], shell=True)
+    except:
+        pass
+
+    return ""
 
 if __name__ == '__main__':
     app.run()

@@ -1,10 +1,18 @@
 #! /bin/bash
 
 repo_dir=/home/joelgkinney/fortpoint.me
-static_src=/home/joelgkinney/fortpoint.me/flask.fortpoint.me/static/
+static_src=$repo_dir/flask.fortpoint.me/static/
 static_dest=/home/joelgkinney/webapps/static/
+remote_name=origin
+branch_name=master
 
-cd $repo_dir && git pull
+if [ $1 ]; then
+    branch_name=$1
+fi
+
+cd $repo_dir
+git fetch $remote_name
+git checkout $remote_name/$branch_name
 
 # Update static assets
 # Delete existing media.
